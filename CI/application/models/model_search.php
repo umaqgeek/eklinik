@@ -1,19 +1,24 @@
 <?php 
 
-class model_user extends CI_Model {
+class model_search extends CI_Model {
 
-	function search()
+	function search_patient()
 	{
+		$ic = $this->input->post('ic_number');
+		$query=$this->db->query("SELECT * FROM pesakit WHERE no_ic = '$ic'");
 
-		$ic = array(
-			'no_ic' => $this->input->post('ic_number')
-			);
+		return $query->result();
 
-		$this->db->where('no_ic', $ic);
-		$result = $this->db->getAll('pesakit');
+		//$ic = $_POST['ic_number'];
+
+		//$this->db->select();
+		//$this->db->from('pesakit');
+		//$this->db->where('no_ic',$ic);
+		//$query = $this->db->get();
+		//$data['patient'] = $query->result();
 
 
-		return $result ;
+		//return $patient ;
 		}
 
 			

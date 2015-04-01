@@ -14,11 +14,7 @@
 | path to your installation.
 |
 */
-<<<<<<< HEAD
-$config['base_url']	= 'http://localhost/CI/index.php/';
-=======
 $config['base_url']	= 'http://localhost:8081/CI/index.php/';
->>>>>>> a94ed51a0f86ca5c9db713afe8807f31102c3b63
 
 /*
 |--------------------------------------------------------------------------
@@ -228,11 +224,7 @@ $config['cache_path'] = '';
 | MUST set an encryption key.  See the user guide for info.
 |
 */
-<<<<<<< HEAD
-$config['encryption_key'] = '';
-=======
 $config['encryption_key'] = 'CF#T@#6F#';
->>>>>>> a94ed51a0f86ca5c9db713afe8807f31102c3b63
 
 /*
 |--------------------------------------------------------------------------

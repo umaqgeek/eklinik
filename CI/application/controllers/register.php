@@ -14,7 +14,8 @@ class register extends CI_Controller{
 		$this->load->view("search");
 
 	}
-	public function search() {
+
+	function search_patient() {
 		$this->load->library('form_validation');
 
 		$this->form_validation->set_rules('ic_number', 'ic_number', 'required');
@@ -27,11 +28,11 @@ class register extends CI_Controller{
 		else
 		{
 			$this->load->model('model_search');
-			$result = $this->model_search->search();
-			if($result)
-			{
-				$this->load->view('profile');
-			}
+
+			$data['result'] = $this->model_search->search_patient();
+
+			$this->load->view('profile', $data);
+			
 		}
 	}
 
@@ -62,5 +63,20 @@ class register extends CI_Controller{
 				$this->load->view("registration/view_register");
 			}
 		}
+	}
+
+	function add_to_queue() {
+
+		$this->load->model('model_queue');
+
+			$this->model_queue->m_queue();
+
+			$data['result'] = $this->model_queue->get_queue();
+
+			$this->load->view('queue', $data);
+
+			
+
+
 	}
 }

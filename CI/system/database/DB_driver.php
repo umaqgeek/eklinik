@@ -31,17 +31,10 @@
  */
 class CI_DB_driver {
 
-<<<<<<< HEAD
-	var $username;      
-	var $password;		
-	var $hostname;
-	var $database;		
-=======
 	var $username;
 	var $password;
 	var $hostname;
 	var $database;
->>>>>>> a94ed51a0f86ca5c9db713afe8807f31102c3b63
 	var $dbdriver		= 'mysql';
 	var $dbprefix		= '';
 	var $char_set		= 'utf8';
