@@ -75,8 +75,24 @@ class register extends CI_Controller{
 
 			$this->load->view('queue', $data);
 
-			
-
-
 	}
+		function current_queue() {
+
+		$this->load->model('model_queue');
+
+			$data['result'] = $this->model_queue->get_queue();
+
+			$this->load->view('queuedoctor', $data);
+
+		}
+
+				function add_detail() {
+
+		$this->load->model('model_queue');
+
+			$data['result'] = $this->model_queue->get_queue();
+
+			$this->load->view('queuedoctor', $data);
+
+		}
 }

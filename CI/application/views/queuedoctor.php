@@ -8,6 +8,7 @@
     <th>IC Number</th>
     <th>Address</th>
     <th>Gender</th>
+    <th>Action</th>
 </tr>
  <?php 
 
@@ -21,6 +22,7 @@
 	 echo "<td align='center'>".$row->no_ic."</td>";
 	 echo "<td align='center'>".$row->address."</td>";
 	 echo "<td align='center'>".$row->gender."</td>";
+	 echo "<td align='center'><a href='register/add_detail?ic=$row->no_ic'>Add Description</a></td><br>";
 
 $i++;
  }
