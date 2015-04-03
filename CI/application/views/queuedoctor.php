@@ -22,7 +22,8 @@
 	 echo "<td align='center'>".$row->no_ic."</td>";
 	 echo "<td align='center'>".$row->address."</td>";
 	 echo "<td align='center'>".$row->gender."</td>";
-	 echo "<td align='center'><a href='register/add_detail?ic=$row->no_ic'>Add Description</a></td><br>";
+	 echo "<td align='center'><a href='register/add_details?ic=$row->no_ic'>Add Description</a></td><br>";
+
 
 $i++;
  }
